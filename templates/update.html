@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container my-3">
+<form class="my-3" action="/update/{{res.sno}}" method="POST">
+  <h1>Update To Do</h1>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" name="title" id="title" value="{{res.title}}" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Description</label>
+    <input type="text" class="form-control" name="desc" value="{{res.desc}}" id="desc">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+{% endblock body %}
